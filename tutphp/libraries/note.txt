@@ -1,0 +1,7 @@
+Bảng 1: category (thể loại)
+    (id, name, slug, images, banner, home, status, create_at, update)
+    slug: cách viết gọn đường dẫn hiển thị ở location
+    home: 0 hoặc 1 -> thể hiện ở việc có cho nó hiển thị ra màn hình chính hay không
+    status
+    create_at : có kiểu current time -> tự động thêm time vào khi mà insert
+    update_at: --//--   
