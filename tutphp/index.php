@@ -5,7 +5,7 @@
     <!-- ################################################################################################ -->
     <article>
       <p>Trung tâm mua bán linh kiện hàng đầu</p>
-      <h3 class="heading">HTV Computer</h3>
+      <h3 class="heading">TP Computer</h3>
       <p>Giá rẻ, Uy tín, Chất lượng</p>
     </article>
     <!-- ################################################################################################ -->
@@ -25,7 +25,7 @@
       <ul class="nospace group overview">
         <?php
         require("admin/autoload/autoload.php");
-        $query = "SELECT * FROM product  ORDER BY product.sale DESC LIMIT 4";
+        $query = "SELECT * FROM product  ORDER BY product.sale DESC LIMIT 8";
         //Truy vấn nè
         $result = mysqli_query($connect, $query);
         $numrow = mysqli_num_rows($result);
@@ -57,7 +57,7 @@
       <ul class="nospace group overview">
         <?php
         require("admin/autoload/autoload.php");
-        $query = "SELECT * FROM `product` ORDER BY created_at DESC LIMIT 4";
+        $query = "SELECT * FROM `product` ORDER BY created_at DESC LIMIT 8";
         //Truy vấn nè
         $result = mysqli_query($connect, $query);
         $numrow = mysqli_num_rows($result);

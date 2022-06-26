@@ -70,7 +70,7 @@
                                             <td><?php echo $rows['created_at'] ?></td>
                                             <td>
                                                 <a class="btn btn-info" href="edit.php?id=<?php echo $rows['id']?>"> <i class="fa fa-edit" ></i>&nbsp;Edit</a>
-                                                <a class="btn btn-danger" href="delete.php?id=<?php echo $rows['id']?>"><i class="fas fa-trash"></i>&nbsp;Delete</a>
+                                                <a class="btn btn-danger" href="delete.php?id=<?php echo $rows['id']?>" onclick="return confirm('Bạn có muốn xóa?')"><i class="fas fa-trash"></i>&nbsp;Delete</a>
                                             </td>
                                         </tr>
 

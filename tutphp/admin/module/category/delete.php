@@ -8,6 +8,6 @@
         if($resultd)
         {
             $_SESSION['success'] = 'Xóa thành công';
-            redirectUrl('/tutphp/admin/module/category/index.php');
+            redirectUrl('/websitephp/admin/module/category/index.php');
         }
 ?>

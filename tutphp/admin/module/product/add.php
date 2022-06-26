@@ -5,7 +5,7 @@
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $error = array();
-            if(!empty($_POST['name']) && !empty($_POST['price']) && !empty($_POST['sale']) && !empty(basename($_FILES['fileUpload']['name'])) && !empty($_POST['category']) && !empty($_POST['description']))
+            if(!empty($_POST['name']) && !empty($_POST['price']) && !empty(basename($_FILES['fileUpload']['name'])) && !empty($_POST['category']) && !empty($_POST['description']))
             {
                 $name = $_POST['name'];
                 $price = $_POST['price'];
@@ -67,7 +67,7 @@
                 if($result)
                 {
                     $_SESSION['success'] = 'Thêm mới thành công';
-                    redirectUrl('/tutphp/admin/module/product/index.php');
+                    redirectUrl('/websitephp/admin/module/product/index.php');
                 }
             }
             else

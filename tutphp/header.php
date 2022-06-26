@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-<title>HTVcomputer</title>
+<title>Cửa hàng Trường Phát</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="user/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -19,6 +19,11 @@
     session_start();
     error_reporting(0);
     // session_destroy(); 
+    if($_SESSION['login'] == true && $_SESSION['level'] != 0)
+    {
+      session_destroy();
+      header('Location: '.'index.php');
+    }
     if(isset($_POST['login']))
     {
         header('Location: '.'login.php');
@@ -49,8 +54,9 @@
     <!-- ################################################################################################ -->
     <div class="fl_left">
       <ul class="nospace">
-        <li><a href="index.php"><i class="fas fa-home fa-lg"></i></a></li>
-        <li><a href="javascript:void(0)">Liên hệ</a></li>
+        <li><a href="index.php"><i style="font-size:15px;" class="fas fa-home fa-lg"> Trang chủ</i></a></li>
+        <li><a href="javascript:void(0)">Thanh Tìm Kiếm</a></li>
+        <li><a href="javascript:void(0)">Thanh Drop down</a></li>
         <li><a class="js-scroll-trigger" href="#giamgia">Siêu giảm giá</a></li>
         <li><a class="js-scroll-trigger" href="#moinhat">Sản phẩm mới nhất</a></li>
       </ul>
@@ -58,8 +64,6 @@
     <form action="" method="post">
         <div class="fl_right">
           <ul class="nospace">
-            <li><i class="fas fa-phone rgtspace-5"></i> +00 (123) 456 7890</li>
-            <li><i class="fas fa-envelope rgtspace-5"></i> thanhthien@gmail.com</li>
             <?php 
               if(isset($_SESSION['login']) && $_SESSION['login'] == true)
               {
@@ -73,10 +77,23 @@
                         <!-- <button style="background: transparent; border: none" type="submit" name="logout" value="logout"><a class="rgtspace-5" href="">Đăng xuất</a></button> -->
                         <input type="submit" name="logout"  value="ĐĂNG XUẤT"  style="background: transparent; border: none; cursor: pointer;" >
                   </li>
+                  <?php 
+                  if($_SESSION['level'] != 0)
+                  {
+                    ?>
+                  <li>
+                      <a href="admin/index.php"><i style="font-size:15px;" class="fas fa-home fa-lg"> QTV</i></a>
+                  </li>
+                  <?php 
+                  }
+                  else
+                  {
+                    ?>
                   <li>
                       <a href="cart.php"><i style="color:white; font-size:20px;" class="fas fa-shopping-cart"></i></a>
                   </li>
               <?php
+                  }
               }
               else
                 {?>
@@ -100,15 +117,15 @@
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="one_half first">
-      <h1 class="logoname"><a href="index.php"><span>HTV</span>computer</a></h1>
+      <h1 class="logoname"><a href="index.php"><span>TP</span>computer</a></h1>
     </div>
     <div class="one_half">
       <ul class="nospace clear">
         <li class="one_half first">
-          <div class="block clear"><i class="fas fa-phone"></i> <span><strong class="block">Gọi cho chúng tôi:</strong> +00 (123) 456 7890</span> </div>
+          <div class="block clear"><i class="fas fa-phone"></i> <span><strong class="block">Gọi cho chúng tôi:</strong> +0898 396 140</span> </div>
         </li>
         <li class="one_half">
-          <div class="block clear"><i class="far fa-clock"></i> <span><strong class="block"> Thứ 2 - Thứ 6 :</strong> 08.00am - 18.00pm</span> </div>
+          <div class="block clear"><i class="far fa-clock"></i> <span><strong class="block"> Thứ 2 - Thứ 7 :</strong> 08.00am - 18.00pm</span> </div>
         </li>
       </ul>
     </div>
@@ -117,13 +134,13 @@
   <nav id="mainav" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul class="clear">
-        <li><a href="/tutphp/cpu.php">CPU -  Bộ Xử Lí</a></li>
-        <li><a href="/tutphp/ram.php">RAM</a></li>
-        <li><a href="/tutphp/ssd.php">Ổ cứng SSD</a></li>
-        <li><a href="/tutphp/hdd.php">Ổ cứng HDD</a></li>
-        <li><a href="/tutphp/odd.php">ODD - Ổ đĩa quang</a></li>
-        <li><a href="/tutphp/vga.php">VGA - Card Màn Hình</a></li>
-        <li><a href="/tutphp/psu.php">PSU - Nguồn Máy Tính</a></li>
+        <li><a href="/websitephp/cpu.php">CPU -  Bộ Xử Lí</a></li>
+        <li><a href="/websitephp/ram.php">RAM</a></li>
+        <li><a href="/websitephp/ssd.php">Ổ cứng SSD</a></li>
+        <li><a href="/websitephp/hdd.php">Ổ cứng HDD</a></li>
+        <li><a href="/websitephp/odd.php">ODD - Ổ đĩa quang</a></li>
+        <li><a href="/websitephp/vga.php">VGA - Card Màn Hình</a></li>
+        <li><a href="/websitephp/psu.php">PSU - Nguồn Máy Tính</a></li>
     </ul>
     <!-- ################################################################################################ -->
   </nav>

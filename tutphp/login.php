@@ -24,7 +24,12 @@
     error_reporting(0);
     require ("admin/autoload/autoload.php");
     if(isset($_SESSION["login"])){
-        if($_SESSION["login"] == true) redirectUrl('/tutphp/index.php');
+        if($_SESSION["login"] == true)
+        {
+            if($_SESSION["level"] == 0)
+            header('Location: '.'index.php');
+            else header('Location: '.'admin/index.php');
+        }
     }
     
     if (isset($_POST["btn_submit"])) 
@@ -51,11 +56,12 @@
                     $_SESSION["email"] = $data["email"];
                     $_SESSION['password'] = $data["password"];
                     $_SESSION['id_user'] = $data['id'];
+                    $_SESSION['level'] = $data['level'];
                     $_SESSION["login"] = true;
                 }
                     // Thực thi hành động sau khi lưu thông tin vào session
                     // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-                    redirectUrl('/tutphp/login.php');
+                    redirectUrl('/websitephp/login.php');
             }
         }
     }
@@ -97,19 +103,13 @@
                                     </div>
                                     <input class="btn btn-primary btn-user btn-block" type="submit" name="btn_submit" value="Login">
                                     <hr>
-                                    <a href="index.html" class="btn btn-google btn-user btn-block">
-                                        <i class="fab fa-google fa-fw"></i> Login with Google
-                                    </a>
-                                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                        <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                    </a>
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    <a class="small" href="forgot-password.html">Quên mật khẩu?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="register.php">Create an Account!</a>
+                                    <a class="small" href="register.php">Tạo tài khoản mới</a>
                                 </div>
                             </div>
                         </div>

@@ -61,16 +61,16 @@
                 <div class="header__menu">
                     <ul class="header__menu-list">
                         <li class="header__menu-item">
-                            <a href="/tutphp/index.php" class="header__menu-link">Home</a>
+                            <a href="/websitephp/index.php" class="header__menu-link">Home</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="/tutphp/category.php" class="header__menu-link">Categoty</a>
+                            <a href="/websitephp/category.php" class="header__menu-link">Categoty</a>
                         </li>
                         <!-- <li class="header__menu-item">
-                            <a href="/tutphp/archives.php" class="header__menu-link">Archives</a>
+                            <a href="/websitephp/archives.php" class="header__menu-link">Archives</a>
 						</li> -->
 						<li class="header__menu-item">
-                            <a href="/tutphp/contact.php" class="header__menu-link">Contact</a>
+                            <a href="/websitephp/contact.php" class="header__menu-link">Contact</a>
 						</li>
 					
 

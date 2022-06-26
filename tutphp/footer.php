@@ -31,7 +31,7 @@
   <footer id="footer" class="hoc clear" style="justify-content:space-between;"> 
     <!-- ################################################################################################ -->
     <div class="one_third first">
-      <h1 class="logoname"><span>HTV</span>computer</h1>
+      <h1 class="logoname"><span>TP</span>computer</h1>
       <p class="btmspace-30">Sau 5 năm thành lập. Công ty chúng tôi đã có mặt hầu hết các tỉnh thành ở Việt Nam. Rất hân hạnh được đón chào quý khách.</p>
       <ul class="faico clear">
         <li><a class="faicon-dribble" href="#"><i class="fab fa-dribbble"></i></a></li>

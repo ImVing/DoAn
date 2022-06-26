@@ -8,6 +8,6 @@
         {
             echo 'a';
             $_SESSION['success'] = 'Xóa thành công';
-            redirectUrl('/tutphp/cart.php');
+            redirectUrl('/websitephp/cart.php');
         }
 ?>

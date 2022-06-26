@@ -28,7 +28,7 @@
     {
         if($capacityold == "")
         {
-            if(isset($_POST['name']) && isset($_POST['price']) && isset($_POST['avt']) && isset($_POST['description']))
+            if(isset($_POST['name']) && ($_POST['name'] != NULL) && isset($_POST['price']) && ($_POST['price'] != NULL) && isset($_POST['avt']) && ($_POST['avt'] != NULL) && isset($_POST['description']))
             {
                 $name = $_POST['name'];
                 $price = $_POST['price'];
@@ -42,12 +42,12 @@
                 if($name == $nameold &&  $price ==  $priceold && $sale == $saleold && $avt == $avtold &&   $category ==  $categoryold && $description == $descriptionold)
                 {
                         $_SESSION['success'] = 'Không có gì thay đổi';
-                        redirectUrl('/tutphp/admin/module/product/index.php');
+                        redirectUrl('/websitephp/admin/module/product/index.php');
                 }
                 else
                 {
                         $_SESSION['success'] = 'Cập nhật thành công';
-                        redirectUrl('/tutphp/admin/module/product/index.php');
+                        redirectUrl('/websitephp/admin/module/product/index.php');
                 }
             }
             else
@@ -70,12 +70,12 @@
                 if($name == $nameold &&  $price ==  $priceold && $capacity == $capacityold && $sale == $saleold && $avt == $avtold &&   $category ==  $categoryold && $description == $descriptionold)
                 {
                         $_SESSION['success'] = 'Không có gì thay đổi';
-                        redirectUrl('/tutphp/admin/module/product/index.php');
+                        redirectUrl('/websitephp/admin/module/product/index.php');
                 }
                 else
                 {
                         $_SESSION['success'] = 'Cập nhật thành công';
-                        redirectUrl('/tutphp/admin/module/product/index.php');
+                        redirectUrl('/websitephp/admin/module/product/index.php');
                 }
             }
             else
